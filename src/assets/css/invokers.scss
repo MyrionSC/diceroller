@@ -1,0 +1,400 @@
+
+
+html {
+  background-color: $InvokersBg;
+}
+
+.template,
+.template-list {
+  position: relative;
+  margin-top: 20px;
+}
+
+.template-list .table tr {
+  cursor: pointer;
+}
+
+.template-list .table tr:hover {
+  /*background-color: #d4ee5e;*/
+}
+
+.template-list .table tr:hover td {
+  background-color: #f4fad2;
+  border-color: #bed654;
+}
+
+/*.template-list.is-boxed {*/
+  /*background-color: white;*/
+  /*border: solid 2px #d4ee5e;*/
+  /*border-radius: 3px;*/
+  /*position: absolute;*/
+  /*margin-top: -12px;*/
+  /*right: 15px;*/
+  /*z-index: 20;*/
+  /*min-width: 250px;*/
+  /*-webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);*/
+  /*-moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);*/
+  /*box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);*/
+/*}*/
+
+/*.template-list.is-boxed h1 {*/
+  /*display: none;*/
+/*}*/
+
+/*.template-list.is-boxed .columns,*/
+/*.template-list.is-boxed .columns:last-child,*/
+/*.template-list.is-boxed .column.is-offset-1,*/
+/*.template-list.is-boxed .table {*/
+  /*margin: 0;*/
+/*}*/
+
+/*.template-list.is-boxed .column {*/
+  /*padding: 0;*/
+/*}*/
+
+/*.template-list.is-boxed .column.is-10 {*/
+  /*width: 100%;*/
+/*}*/
+
+.template-list .active {
+  background-color: #d4ee5e;
+}
+
+h1 {
+  padding-bottom: 8px;
+  border-bottom: solid 3px #D8D9D3;
+  display: flex;
+}
+
+h1 .editable {
+  cursor: pointer;
+}
+
+.table thead {
+  background-color: $InvokersBg;
+}
+.table thead th:hover {
+  background-color: $InvokersBgDark;
+}
+.table thead th .icon {
+  margin-top: 1.5px;
+}
+.table thead .dateChangedHeader {
+  width: 200px;
+}
+
+
+
+h1 .title,
+h1 .icon.is-small {
+  vertical-align: middle;
+}
+
+.editable .icon {
+  color: darkgray;
+}
+.editable:hover .icon {
+  color: inherit;
+}
+
+h1 .headerContainer {
+  margin-right: auto;
+}
+
+h1 .input {
+  height: inherit;
+}
+
+.action-buttons {
+  display: inline-flex;
+}
+.button.is-success,
+.button.is-warning,
+.button.is-danger,
+.button.is-success:hover,
+.button.is-warning:hover,
+.button.is-danger:hover{
+  color: #363636;
+}
+.button.is-success {
+  background: #d4ee5e;
+  margin-right: 20px;
+}
+.button.is-success:hover,
+.button.is-success:focus,
+.button.is-success.is-active {
+  background: #bed654;
+  color: #363636;
+}
+.button.is-warning {
+  background: #eee900;
+  margin-right: 20px;
+}
+.button.is-warning:hover {
+  background: #d7d200;
+}
+
+.button.is-danger {
+  background: #ff6666;
+}
+.button.is-danger:hover {
+  background: #e60000;
+}
+.button.new-form {
+  margin-right: auto;
+}
+
+span.saveInfo {
+  margin-right: 10px;
+  padding: 4px;
+  font-size: 16px;
+}
+span.saveInfo.is-success {
+  color: #19a800;
+}
+span.saveInfo.is-danger {
+  color: #e60000;
+}
+
+div .control {
+  min-width: 250px;
+}
+
+.questions {
+  margin: 15px 0;
+}
+
+.question {
+  position: relative;
+  background-color: white;
+  padding: 25px 20px;
+  margin: 25px 0;
+}
+
+.question-circle {
+  display: flex;
+  border: solid 3px white;
+  border-radius: 30px;
+  color: white;
+  position: absolute;
+  z-index: 10;
+}
+
+.question-circle.question-number {
+  background-color: #d4ee5e;
+  height: 32px;
+  left: 0px;
+  top: 0px;
+  text-align: center;
+  transform: translateX(-25%) translateY(-25%);
+  width: 32px;
+}
+.question-circle .number {
+  position: relative;
+  display: block;
+  background-color: transparent;
+  margin: 0 auto;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 3px 0;
+}
+
+.question-circle.question-delete {
+  background-color: #ff4242;
+  height: 32px;
+  right: 0px;
+  top: 0px;
+  text-align: center;
+  transform: translateX(25%) translateY(-25%);
+  width: 32px;
+  cursor: pointer;
+}
+.icon.medium {
+  display: inline-block;
+  font-size: 20px;
+  height: 20px;
+  line-height: 24px;
+  text-align: center;
+  vertical-align: top;
+  width: 24px;
+}
+
+.add-image-container {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 5px;
+  border: 1px solid $BorderColor;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 10;
+}
+.add-image-container:hover {
+  border-color: #b5b5b5;
+}
+.add-image {
+  height: 64px;
+  width: 64px;
+}
+img {
+  max-height: 100%;
+}
+
+.question-circle.order-button {
+  display: none;
+  background-color: #ff4242;
+  cursor: pointer;
+  left: 50%;
+  padding: 4px;
+}
+
+.order-button.up {
+  top: 0px;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.order-button.down {
+  bottom: 0px;
+  transform: translateX(-50%) translateY(50%);
+}
+
+.question:hover .order-button,
+.question.active .order-button {
+  display: flex;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.buttons .add-button {
+  background-color: transparent;
+  border-color: transparent;
+  color: #ff4242;
+}
+
+.subtitle {
+  color: #9a9a9a;
+}
+
+.answers {
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 1em;
+}
+
+.answers .answer + .answer {
+  margin-top: 0.50em;
+}
+
+.answer {
+  height: 24px;
+}
+
+
+li.answer.control,
+.question.edit .answer {
+  height: 32px;
+}
+
+.answer .text {
+  line-height: 24px;
+}
+
+.answer .answer-button {
+  display: inline-block;
+}
+
+.answer-button {
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  height: 21px;
+  width: 21px;
+  padding: 2px;
+}
+.answer-button.red {
+  background-color: #ff4242;
+}
+.answer-button.yellow {
+  background-color: #ffbd00;
+}
+.fa.edit {
+  margin-left: 3px;
+}
+.fa-remove,
+.fa-plus {
+  margin-left: 2px;
+}
+.fa-plus {
+  margin-top: 1px;
+}
+
+.answer-button.down,
+.answer-button.up {
+  padding: 2px 3px;
+}
+
+.answer .control,
+.answer .input {
+  vertical-align: middle;
+}
+
+.answer .control {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.answer .control.is-horizontal .control {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.answer.new {
+  list-style: none;
+}
+
+.question-element-seperator {
+  margin-bottom: 30px;
+}
+
+.select.modal-select-container {
+  width: 50%;
+}
+.select .modal-select {
+  width: 100%;
+}
+.input.modal-alert-box {
+  height: 100px;
+}
+.modal div.betweenLimitation {
+  display: flex;
+  align-items: center;
+}
+.modal div.betweenLimitation span {
+  margin: 3px;
+}
+
+//.ng-valid[required], .ng-valid.required  {
+//  border-left: 5px solid #42A948; /* green */
+//}
+.ng-invalid:not(div):not(ol):not(form):not(.ng-pristine) {
+  border-color: #ff3860;
+  border-left: 5px solid #ff3860; /* red */
+}
+
+.validationText {
+  margin-left: 8px;
+  color: #9a9a9a;
+  font-size: 12px;
+}
+.modal-card-foot .button:last-child {
+  margin-left: auto;
+}
+.help {
+  font-size: 16px;
+}
+.center {
+  text-align: center;
+  margin-top: 30px;
+}
