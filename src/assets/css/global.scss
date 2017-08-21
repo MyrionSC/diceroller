@@ -1,0 +1,21 @@
+
+
+html {
+  background-color: $InvokersBg;
+}
+
+.outer-container {
+  text-align: -webkit-center;
+
+}
+
+.inner-container {
+  width: fit-content;
+  margin-top: 30px;
+  padding: 40px;
+  background-color: white;
+  //border: solid 1px gray;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
