@@ -1,21 +1,90 @@
 
-
 html {
-  background-color: $InvokersBg;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 30px;
+  width: fit-content;
+  margin: auto;
+  font-family: Helvetica;
 }
 
 .outer-container {
-  text-align: -webkit-center;
-
+  padding: 20px;
 }
 
 .inner-container {
-  width: fit-content;
+  margin: auto;
+  max-width: 600px;
   margin-top: 30px;
-  padding: 40px;
+  padding: 30px;
   background-color: white;
-  //border: solid 1px gray;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
+
+input.input.dice-amount {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  height: inherit;
+  line-height: inherit;
+}
+
+.table tr {
+  align-items: center;
+  white-space: nowrap;
+}
+
+.table td,
+.table th {
+  border: 0;
+  padding: 8px 10px;
+  vertical-align: inherit;
+}
+
+.bottomLine {
+  position: relative;
+  top: 20px;
+  right: 20px;
+  width: fit-content;
+  padding: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.button {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  height: inherit;
+  line-height: inherit;
+}
+
+label, .checkbox {
+  cursor: pointer;
+}
+
+.table tr:hover {
+  background-color: inherit;
+}
+
+div .bottomLine span {
+  margin-left: 50px;
+}
+
+//.inner-container div {
+//  margin-bottom: 10px;
+//  display: inline-flex;
+//  align-items: center;
+//}
+//.inner-container div input {
+//  margin-left: 20px;
+//  margin-right: 50px;
+//  width: 100px;
+//}
+//.inner-container div span {
+//  white-space: nowrap;
+//}

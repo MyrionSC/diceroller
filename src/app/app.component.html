@@ -1,8 +1,67 @@
 <div class="outer-container">
+    <h1>Axis & Allies Dice Roller</h1>
     <div class="inner-container">
-        <div>
-            <button class="button">button 1</button>
-            <span>result 1</span>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Unit value</th>
+                    <th>Number of dice</th>
+                    <th>Hits</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&lt;= 1</td>
+                    <td>
+                        <input #firstInput autofocus [(ngModel)]="diceField1" type="number" min="0" class="input dice-amount"/>
+                    </td>
+                    <td>{{resultField1 | resultpipe}}</td>
+                </tr>
+                <tr>
+                    <td>&lt;= 2</td>
+                    <td>
+                        <input [(ngModel)]="diceField2" type="number" min="0" class="input dice-amount"/>
+                    </td>
+                    <td>{{resultField2 | resultpipe}}</td>
+                </tr>
+                <tr>
+                    <td>&lt;= 3</td>
+                    <td>
+                        <input [(ngModel)]="diceField3" type="number" min="0" class="input dice-amount"/>
+                    </td>
+                    <td>{{resultField3 | resultpipe}}</td>
+                </tr>
+                <tr>
+                    <td>&lt;= 4</td>
+                    <td>
+                        <input [(ngModel)]="diceField4" type="number" min="0" class="input dice-amount"/>
+                    </td>
+                    <td>{{resultField4 | resultpipe}}</td>
+                </tr>
+                <tr *ngIf="showFive">
+                    <td>&lt;= 5</td>
+                    <td>
+                        <input [(ngModel)]="diceField5" type="number" min="0" class="input dice-amount"/>
+                    </td>
+                    <td>{{resultField5 | resultpipe}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button class="button" (click)="rollDice()">Roll dice</button>
+                    </td>
+                    <td>{{total | resultpipe}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="bottomLine" style="display: inline-flex;">
+            <label class="label">
+                show 5
+                <input class="checkbox" type="checkbox" (change)="showFive = !showFive">
+            </label>
+            <span>ctrl + Space: Roll Dice</span>
+            <span>ctrl + B: Reset</span>
         </div>
     </div>
 </div>
