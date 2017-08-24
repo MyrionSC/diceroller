@@ -12,6 +12,7 @@ h1 {
 
 .outer-container {
   padding: 20px;
+  opacity: 0.95;
 }
 
 .inner-container {
@@ -52,7 +53,6 @@ input.input.dice-amount {
   width: fit-content;
   padding: 8px;
   font-size: 14px;
-  cursor: pointer;
 }
 
 .button {
@@ -61,6 +61,7 @@ input.input.dice-amount {
   font-size: 16px;
   height: inherit;
   line-height: inherit;
+  background: whitesmoke;
 }
 
 label, .checkbox {
@@ -75,16 +76,12 @@ div .bottomLine span {
   margin-left: 50px;
 }
 
-//.inner-container div {
-//  margin-bottom: 10px;
-//  display: inline-flex;
-//  align-items: center;
-//}
-//.inner-container div input {
-//  margin-left: 20px;
-//  margin-right: 50px;
-//  width: 100px;
-//}
-//.inner-container div span {
-//  white-space: nowrap;
-//}
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  //opacity: 0.5;
+}

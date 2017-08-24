@@ -20,6 +20,31 @@ export class AppComponent {
     total = -1;
     showFive = false;
 
+    imageIterator = 0;
+    images = [
+        'assets/images/img0.jpg',
+        'assets/images/img1.jpg',
+        'assets/images/img2.jpg',
+        'assets/images/img3.jpg',
+        'assets/images/img4.jpg',
+        'assets/images/img5.jpg',
+        'assets/images/img6.jpg',
+        'assets/images/img7.jpg',
+        'assets/images/img8.jpg',
+        'assets/images/img9.jpg',
+        'assets/images/img10.jpg',
+        'assets/images/img11.jpg',
+        'assets/images/img12.jpg',
+        'assets/images/img13.jpg',
+        'assets/images/img14.jpg',
+        'assets/images/img15.jpg',
+        'assets/images/img16.jpg',
+        'assets/images/img17.jpg',
+        'assets/images/img18.jpg'
+    ];
+    backgroundImage = this.images[this.imageIterator++];
+
+
     @HostListener('window:keydown', ['$event'])
     keyboardInput(event: KeyboardEvent) {
         if (event.code === 'Space' && event.ctrlKey === true) {
@@ -29,7 +54,15 @@ export class AppComponent {
         }
     }
 
-    constructor(private renderer: Renderer) {}
+    constructor(private renderer: Renderer) {
+        setInterval(() => {
+            console.log(this.imageIterator);
+            this.backgroundImage = this.images[this.imageIterator++];
+            if (this.imageIterator >= this.images.length) {
+                this.imageIterator = 0;
+            }
+        }, 60000);
+    }
 
     rollDice () {
         this.resultField1 = this.roll(this.diceField1, 1);
