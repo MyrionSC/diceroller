@@ -1,5 +1,5 @@
 import {Component, ElementRef, HostListener, Renderer, ViewChild} from '@angular/core';
-// declare var Fractions;
+declare var Fraction: any;
 
 @Component({
   selector: 'app-root',
@@ -57,6 +57,11 @@ export class AppComponent {
     }
 
     constructor(private renderer: Renderer) {
+        console.log("lskdjf");
+        console.log(new Fraction(1, 2));
+        console.log(new Fraction(1, 2));
+
+
         setInterval(() => {
             console.log(this.imageIterator);
             this.backgroundImage = this.images[this.imageIterator++];
