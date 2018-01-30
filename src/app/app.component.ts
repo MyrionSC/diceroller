@@ -1,4 +1,5 @@
 import {Component, ElementRef, HostListener, Renderer, ViewChild} from '@angular/core';
+// declare var Fractions;
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,7 @@ import {Component, ElementRef, HostListener, Renderer, ViewChild} from '@angular
 })
 export class AppComponent {
     @ViewChild('firstInput') firstInput: ElementRef;
+
     diceField1 = 0;
     diceField2 = 0;
     diceField3 = 0;
