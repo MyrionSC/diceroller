@@ -38,13 +38,6 @@
                     </td>
                     <td>{{resultField4 | resultpipe}}</td>
                 </tr>
-                <tr *ngIf="showFive">
-                    <td>&lt;= 5</td>
-                    <td>
-                        <input [(ngModel)]="diceField5" type="number" min="0" class="input dice-amount"/>
-                    </td>
-                    <td>{{resultField5 | resultpipe}}</td>
-                </tr>
                 <tr>
                     <td></td>
                     <td>
@@ -56,11 +49,7 @@
         </table>
 
         <div class="bottomLine" style="display: inline-flex;">
-            <label class="label">
-                show 5
-                <input class="checkbox" type="checkbox" (change)="showFive = !showFive">
-            </label>
-            <span>ctrl + Space: Roll Dice</span>
+            <span>Enter: Roll Dice</span>
             <span>ctrl + B: Reset</span>
         </div>
     </div>
