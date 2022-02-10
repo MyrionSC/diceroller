@@ -23,7 +23,7 @@
     "@angular/router": "^3.3.1",
     "core-js": "^2.5.3",
     "fractions": "^1.0.2",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "rxjs": "^5.5.6",
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.7.2"
